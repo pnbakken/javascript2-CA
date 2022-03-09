@@ -1,4 +1,4 @@
-import index from "./modules/components/index/index.js";
+
 
 /** 
  *  Fetch data-array from api, display 3 props for each item.
