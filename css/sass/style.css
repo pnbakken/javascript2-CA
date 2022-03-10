@@ -1,6 +1,25 @@
 nav {
   display: flex;
   padding: 1rem;
+  background: #f6faf7;
+  box-shadow: 0 5px 5px black;
+}
+
+main {
+  padding: 3% 6%;
+}
+
+.main-data-container {
+  background: #f6faf7;
+  border-radius: 0.12rem;
+  padding: 2.5% 5%;
+  box-shadow: 0 5px 5px black;
+}
+
+.data-list {
+  display: flex;
+  flex: row wrap;
+  max-width: 100%;
 }
 
 * {
@@ -10,7 +29,7 @@ nav {
 }
 
 body {
-  background: #f6faf7;
+  background: #3b3b3b;
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
