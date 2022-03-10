@@ -1,7 +1,21 @@
+/*
+* Colour variables
+*/
+
+//Color scheme
+
 $color-light-grey: #f6faf7;
 $color-dark-grey: #3b3b3b;
+
+$color-light-blue: #2D93AD;
+$color-bright-orange: #C85C2D;
+
+$color-dark-shadow: #1f1f1f;
 
 
 //Other
 
-$large-shadow: 0 5px 5px black;
+$large-shadow: 0 5px 5px $color-dark-shadow;
+$small-shadow: 0 2px 2px $color-dark-shadow;
+
+

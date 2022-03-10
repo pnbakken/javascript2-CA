@@ -7,5 +7,7 @@ main {
     border-radius: 0.12rem;
     padding: 2.5% 5%;
     box-shadow: $large-shadow;
+    display: flex;
+    justify-content: center;
 }
 

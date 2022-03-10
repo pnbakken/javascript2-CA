@@ -1,6 +1,19 @@
 nav {
     display: flex;
     padding: 1rem;
+    padding-bottom: 0.5rem;
     background: $color-light-grey;
     box-shadow: $large-shadow;
+    gap: 20px;
+    align-items: baseline;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    
+    li {
+        display: inline;
+    }
 }

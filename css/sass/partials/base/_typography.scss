@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fredoka:wght@400;500;600&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+/*
+* Font variables
+*/
+
+$brand-font: "Dancing Script", cursive;
+$heading-font: "Fredoka", sans-serif;
+$body-font: "Open Sans", sans-serif;
+
+/*
+* typography rules
+*/
+
+body {
+    font-family: $body-font;
+}
+
+.nav-logo {
+    font-family: $brand-font;
+    font-weight: 700;
+    font-size: 2rem;
+    color: $color-bright-orange;
+}
+
+
+.nav-link {
+    font-family: $heading-font;
+    font-size: 1.2rem;
+    text-decoration: none;
+    
+    .active {
+        color: $color-light-blue;
+    }
+}

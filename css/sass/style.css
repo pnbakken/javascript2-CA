@@ -1,8 +1,50 @@
+/*
+* Colour variables
+*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fredoka:wght@400;500;600&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+/*
+* Font variables
+*/
+/*
+* typography rules
+*/
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav-logo {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #C85C2D;
+}
+
+.nav-link {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.nav-link .active {
+  color: #2D93AD;
+}
+
 nav {
   display: flex;
   padding: 1rem;
+  padding-bottom: 0.5rem;
   background: #f6faf7;
-  box-shadow: 0 5px 5px black;
+  box-shadow: 0 5px 5px #1f1f1f;
+  gap: 20px;
+  align-items: baseline;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links li {
+  display: inline;
 }
 
 main {
@@ -13,13 +55,23 @@ main {
   background: #f6faf7;
   border-radius: 0.12rem;
   padding: 2.5% 5%;
-  box-shadow: 0 5px 5px black;
+  box-shadow: 0 5px 5px #1f1f1f;
+  display: flex;
+  justify-content: center;
 }
 
 .data-list {
   display: flex;
   flex: row wrap;
   max-width: 100%;
+  gap: 1rem;
+}
+
+.data-item {
+  border: 1px solid #3b3b3b;
+  padding: 2% 4%;
+  border-radius: 0.12rem;
+  box-shadow: 0 2px 2px #1f1f1f;
 }
 
 * {
