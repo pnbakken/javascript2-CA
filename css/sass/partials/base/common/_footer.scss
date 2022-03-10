@@ -1,0 +1,11 @@
+footer {
+    background: #1b1b1b;
+    color: $color-light-grey;
+    padding: 2% 5%;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        color: $color-light-grey;
+    }
+}

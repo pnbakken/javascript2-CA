@@ -1,5 +1,5 @@
-import fetchData from "../tools/network/fetchData.js";
-import { dataURL } from "../settings/url.js";
+
+import actionFavourite from "../favourites/actionFavourite.js";
 
 
 export default function buildDataList(data, target) {
@@ -9,6 +9,9 @@ export default function buildDataList(data, target) {
 
     data.forEach((item) => {
         dataTarget.innerHTML += buildListItem(item);
+    })
+    document.querySelectorAll(".favourite-button").forEach( (button) => {
+        button.addEventListener("click", actionFavourite);
     })
     
 
@@ -24,6 +27,7 @@ return `<div class="data-item">
                 <p class="item-title">${title}</p>
                 <p class="item-author">${author}</p>
                 <p class="item-summary">${summary}</p>
+                <button class="favourite-button" data-id="${id}">Favourite</button>
             </div>
         </div>`;
 

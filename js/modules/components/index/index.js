@@ -1,6 +1,6 @@
 import { dataURL } from "../../settings/url.js";
 import fetchData from "../../tools/network/fetchData.js";
-import buildDataList from "../buildDataList.js";
+import buildDataList from "../common/buildDataList.js";
 import displayMessage from "../common/displayMessage.js";
 
 export default (async function index() {

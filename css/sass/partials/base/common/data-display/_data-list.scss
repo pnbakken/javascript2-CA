@@ -1,9 +1,16 @@
 .data-list {
-    display: flex;
-    flex: row wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     max-width: 100%;
     gap: 1rem;
     
+    @media (max-width: 864px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 630px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .data-item {
@@ -11,4 +18,8 @@
     padding: 2% 4%;
     border-radius: 0.12rem;
     box-shadow: $small-shadow;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
 }
