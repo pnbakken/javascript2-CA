@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  padding: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f6faf7;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -6,6 +6,6 @@ export default async function fetchData(url) {
         return result;
     } catch(err) {
         console.error(err);
-        return (err);
+        return null;
     }
 }
