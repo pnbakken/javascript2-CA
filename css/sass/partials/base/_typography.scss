@@ -16,18 +16,20 @@ body {
     font-family: $font-body;
 }
 
-.nav-logo {
+.nav-logo>a{
     font-family: $font-brand;
     font-weight: 700;
     font-size: 2rem;
     color: $color-bright-orange;
+    text-decoration: none;
 }
 
 
-.nav-link {
+.nav-link>a {
     font-family: $font-heading;
     font-size: 1.2rem;
     text-decoration: none;
+    color: $color-dark-grey;
     
     .active {
         color: $color-light-blue;

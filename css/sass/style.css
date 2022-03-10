@@ -12,19 +12,21 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-.nav-logo {
+.nav-logo > a {
   font-family: "Dancing Script", cursive;
   font-weight: 700;
   font-size: 2rem;
   color: #C85C2D;
+  text-decoration: none;
 }
 
-.nav-link {
+.nav-link > a {
   font-family: "Fredoka", sans-serif;
   font-size: 1.2rem;
   text-decoration: none;
+  color: #3b3b3b;
 }
-.nav-link .active {
+.nav-link > a .active {
   color: #2D93AD;
 }
 
