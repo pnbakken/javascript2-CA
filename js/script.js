@@ -6,3 +6,8 @@
  *  Create a separate page where the user's favourite items will be displayed. 
  *  Let admin user sign in and edit or update items,
  **/
+
+import { clearStorage } from "./modules/settings/storage.js";
+
+//Having so much trouble with storage that I made this handy button for testing
+document.querySelector("#storage-clear").onclick = clearStorage; 

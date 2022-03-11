@@ -1,5 +1,5 @@
 
-import actionFavourite from "../favourites/actionFavourite.js";
+import {actionFavourite} from "../favourites/favourites.js";
 
 
 export default function buildDataList(data, target) {
