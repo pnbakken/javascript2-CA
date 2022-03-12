@@ -13,8 +13,17 @@ async function favourites() {
     if (!favourites || favourites.length === 0) {
         displayMessage("warning-message", "You don't seem to have any favourites", ".data-list");
     } else {
-         
-         const newData = data.filter((item) => isFavourite(item.id));
+         const newData = data.filter((item) => {
+             console.log(item);
+             if (isFavourite(item.id)) {
+                 console.log(item.id + " is definitely a favourite");
+                 return true;
+             } else {
+                 console.log(item.id + "is not a favourite");
+                 return false;
+             }
+         });
+         console.log("Favourites list is " + newData);
          buildDataList(newData, ".data-list");  
         }
 
@@ -31,35 +40,36 @@ function getFavourites() {
 }
 
 function isFavourite(itemID) {
+    console.log(itemID);
     const favourites = getFavourites();
+    console.log(favourites);
     if (favourites) {
-        if (favourites.length >= 1) {
-            favourites.forEach((favourite) => {
-                if (parseInt(favourite.id) === parseInt(itemID)) {
-                    return true;
-                } else return false;
-            });
-        } else {
-            if (parseInt(favourites) === parseInt(itemID)) {
-                return true;
-            } else return false;
-        }
+        
+        let check = false;
+        favourites.forEach((favourite) => {
+            console.log(favourite + " === " + itemID);
+            if (parseInt(favourite) === parseInt(itemID)) {
+                check = true;
+            } 
+        });
+        return check;
     } else return false;
-}
+    
+    }
 
 export function actionFavourite(event) {
     const id = parseInt(event.target.dataset.id);
     console.log(id);
-    const hasFavourite = isFavourite(id);
 
-    if(hasFavourite) {
+    if(isFavourite(id)) {
         removeFromFavourites(id);
         
     } else {
         addToFavourites(id);
     }
-
-    if (window.location.pathName === "/favourites.html") {
+    
+    if (document.querySelector("title").innerText === "Favourites") {
+        console.log("title is favourites");
         favourites();
     }
 }
@@ -70,16 +80,21 @@ function addToFavourites(itemID) {
     let newFavourites = [];
     if (!favourites) {
         newFavourites.push(itemID);
+        saveFavourites(newFavourites);
     } else {
-        newFavourites = favourites.push(itemID);
+        favourites.push(itemID);
+        saveFavourites(favourites);
     }
-    saveFavourites(newFavourites);
+    
     
 }
 
 function removeFromFavourites(itemID) {
-    const newFavourites = getFavourites().filter((item) => !isFavourite(itemID));
+    //Doesn't check for favourites because this function shouldn't be called if there aren't any.
+    const favourites = getFavourites();
+    const newFavourites = favourites.filter((item) => item !== itemID);
     saveFavourites(newFavourites);
+    console.log(newFavourites);
     
 }
 
