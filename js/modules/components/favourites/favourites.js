@@ -31,7 +31,7 @@ async function favourites() {
     }
 favourites();
 
-function getFavourites() {
+export function getFavourites() {
     const storedFavourites = getFromStorage("favourites");
     if (!storedFavourites) {
         console.log("null favourites");

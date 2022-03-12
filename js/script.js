@@ -9,5 +9,6 @@
  **/
 
 import { clearStorage } from "./modules/settings/storage.js";
+import searchInit from "./modules/tools/search/search.js";
 
- document.querySelector(".storage-clear").onclick = clearStorage;
+ document.querySelector("#storage-clear").onclick = clearStorage;

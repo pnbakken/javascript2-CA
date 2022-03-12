@@ -1,4 +1,5 @@
 
+import searchInit from "../../tools/search/search.js";
 import {actionFavourite} from "../favourites/favourites.js";
 import displayMessage from "./displayMessage.js";
 
@@ -15,9 +16,6 @@ export default function buildDataList(data, target) {
     document.querySelectorAll(".favourite-button").forEach( (button) => {
         button.addEventListener("click", actionFavourite);
     })
-    
-
-
     
 }
 
