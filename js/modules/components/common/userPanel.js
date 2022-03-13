@@ -1,3 +1,4 @@
+import { prepareNewEntry } from "../../tools/admin/createEntry.js";
 import { getUser, signOut } from "../../tools/auth/loginKeeper.js";
 
 export function userPanel() {
@@ -6,6 +7,10 @@ export function userPanel() {
                         <div><button class="logout-button">Log out</div>`;
 
     document.querySelector(".logout-button").onclick = doLogout;
+
+    
+    document.querySelector("footer").innerHTML += `<div><button id="create-new">Create new entry</button></div>`;
+    document.querySelector("#create-new").onclick = prepareNewEntry;
     
 }
 

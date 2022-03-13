@@ -1,6 +1,5 @@
-export default async function postData(url, outData) {
+export default async function postData(url, outData) { // This only works for the logging in post. would be better to have the options-object as a variable parameter.
     const data = JSON.stringify(outData);
-    console.log(data);
     const options = {
         method: "POST",
         body : data,
@@ -12,7 +11,6 @@ export default async function postData(url, outData) {
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result);
         return result;
     } catch(err) {
         console.error(err);

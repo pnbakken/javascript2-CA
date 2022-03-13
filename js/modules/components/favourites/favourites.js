@@ -3,7 +3,6 @@ import buildDataList from "../common/buildDataList.js";
 import displayMessage from "../common/displayMessage.js";
 import {dataURL} from "../../settings/url.js";
 import getData from "../../tools/network/fetchData.js";
-import searchInit from "../../tools/search/search.js";
 
 
 
@@ -15,16 +14,12 @@ async function favourites() {
         displayMessage("warning-message", "You don't seem to have any favourites", ".data-list");
     } else {
          const newData = data.filter((item) => {
-             console.log(item);
              if (isFavourite(item.id)) {
-                 console.log(item.id + " is definitely a favourite");
                  return true;
              } else {
-                 console.log(item.id + "is not a favourite");
                  return false;
              }
          });
-         console.log("Favourites list is " + newData);
          buildDataList(newData, ".data-list");  
          document.querySelector("#clear-favourites").onclick = clearFavourites;
         }
@@ -36,20 +31,16 @@ favourites();
 export function getFavourites() {
     const storedFavourites = getFromStorage("favourites");
     if (!storedFavourites) {
-        console.log("null favourites");
         return null
     } else return storedFavourites;
 }
 
 export function isFavourite(itemID) {
-    console.log(itemID);
     const favourites = getFavourites();
-    console.log(favourites);
     if (favourites) {
         
         let check = false;
         favourites.forEach((favourite) => {
-            console.log(favourite + " === " + itemID);
             if (parseInt(favourite) === parseInt(itemID)) {
                 check = true;
             } 
@@ -61,7 +52,6 @@ export function isFavourite(itemID) {
 
 export function actionFavourite(event) {
     const id = parseInt(event.target.dataset.id);
-    console.log(id);
 
     if(isFavourite(id)) {
         removeFromFavourites(id);
@@ -72,14 +62,12 @@ export function actionFavourite(event) {
     }
     
     if (document.querySelector("title").innerText === "Favourites") {
-        console.log("title is favourites");
         favourites();
     }
 }
 
 function addToFavourites(itemID) {
     const favourites = getFavourites();
-    console.log(favourites);
     let newFavourites = [];
     if (!favourites) {
         newFavourites.push(itemID);
@@ -97,7 +85,6 @@ function removeFromFavourites(itemID) {
     const favourites = getFavourites();
     const newFavourites = favourites.filter((item) => item !== itemID);
     saveFavourites(newFavourites);
-    console.log(newFavourites);
     
 }
 
@@ -113,7 +100,6 @@ function switchFavourite(target, action) {
     } else {
         target.innerText = "Unfavourite";
     }
-    console.log(target.parentElement.parentElement);
 }
 
 function clearFavourites() {

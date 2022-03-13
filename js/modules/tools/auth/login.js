@@ -15,10 +15,8 @@ if (getUser()) {
 
 function validateLogin(event) {
     event.preventDefault();
-    console.log(event.target);
     const identifier = event.target.identifier.value.trim();
     const password = event.target.password.value.trim();
-    console.log(identifier + " | " + password);
 
     if (identifier && password) {
         performLogin(identifier, password);
@@ -42,7 +40,6 @@ async function performLogin(identifier, password) {
             saveUser(response.user);
             window.location.href="./index.html";
         }
-        console.log(response);
     } catch (err) {
         console.error(err);
         displayMessage("error-message", err, ".login-message");

@@ -5,7 +5,6 @@ import displayMessage from "./displayMessage.js";
 
 
 export default function buildDataList(data, target) {
-    console.log(data);
     
     const dataTarget = document.querySelector(target);
     dataTarget.innerHTML = "";
