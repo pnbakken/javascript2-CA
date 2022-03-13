@@ -10,3 +10,6 @@ export function getFromStorage(key) {
         return [];
     } else return foundData;
 }
+
+
+// I ended up writing and importing all storage functions from the storage.js file in the settings folder. I don't think anything actually uses this script, but I daren't delete it this late in the week.

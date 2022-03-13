@@ -39,7 +39,7 @@ export function getFavourites() {
     } else return storedFavourites;
 }
 
-function isFavourite(itemID) {
+export function isFavourite(itemID) {
     console.log(itemID);
     const favourites = getFavourites();
     console.log(favourites);
@@ -63,9 +63,10 @@ export function actionFavourite(event) {
 
     if(isFavourite(id)) {
         removeFromFavourites(id);
-        
+        switchFavourite(event.target, "remove");
     } else {
         addToFavourites(id);
+        switchFavourite(event.target, "add");
     }
     
     if (document.querySelector("title").innerText === "Favourites") {
@@ -100,4 +101,15 @@ function removeFromFavourites(itemID) {
 
 function saveFavourites(favourites) {
     saveToStorage("favourites", favourites);
+}
+
+function switchFavourite(target, action) {
+    target.classList.toggle("favourited");
+    target.parentElement.parentElement.classList.toggle("favourite");
+    if (action === "remove") {
+        target.innerText = "Favourite";
+    } else {
+        target.innerText = "Unfavourite";
+    }
+    console.log(target.parentElement.parentElement);
 }

@@ -14,12 +14,19 @@
 }
 
 .data-item {
-    border: 1px solid $color-dark-grey;
+    border: 2px solid $color-dark-grey;
     padding: 2% 4%;
     border-radius: 0.12rem;
     box-shadow: $small-shadow;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 10px;
+
+    button {
+        padding: 5px;
+        background: $color-light-grey;
+        border: 2px solid $color-light-green;
+    }
     
 }
