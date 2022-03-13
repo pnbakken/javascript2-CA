@@ -17,8 +17,8 @@ body {
 }
 
 .nav-logo>a{
-    font-family: $font-brand;
-    font-weight: 700;
+    font-family: $font-heading;
+    font-weight: 600;
     font-size: 2rem;
     color: $color-medium-orange;
     text-decoration: none;
@@ -36,13 +36,24 @@ body {
     }
 }
 
-.item-title {
-    font-family: $font-heading;
-    font-weight: 600;
-    font-size: 1.5rem;
+.data-item {
+
+    .item-title {
+        font-family: $font-heading;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+    
+    .item-author {
+        font-family: $font-heading;
+        font-weight: 300;
+    }
+
+    button {
+        font-family: $font-heading;
+        font-weight: 500;
+    }
 }
 
-.item-author {
-    font-family: $font-heading;
-    font-weight: 300;
-}
+
+

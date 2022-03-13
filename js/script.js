@@ -11,4 +11,4 @@
 import { clearStorage } from "./modules/settings/storage.js";
 import searchInit from "./modules/tools/search/search.js";
 
- document.querySelector("#storage-clear").onclick = clearStorage;
+ document.querySelector("#storage-clear").onclick = clearStorage; // This isn't the clear favourites button. I just added this to make things easier when working through storage-related problems.

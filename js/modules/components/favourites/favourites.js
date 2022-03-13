@@ -1,4 +1,4 @@
-import { saveToStorage, getFromStorage } from "../../settings/storage.js";
+import { saveToStorage, getFromStorage, removeStorageItem } from "../../settings/storage.js";
 import buildDataList from "../common/buildDataList.js";
 import displayMessage from "../common/displayMessage.js";
 import {dataURL} from "../../settings/url.js";
@@ -25,6 +25,7 @@ async function favourites() {
          });
          console.log("Favourites list is " + newData);
          buildDataList(newData, ".data-list");  
+         document.querySelector("#clear-favourites").onclick = clearFavourites;
         }
 
         
@@ -112,4 +113,9 @@ function switchFavourite(target, action) {
         target.innerText = "Unfavourite";
     }
     console.log(target.parentElement.parentElement);
+}
+
+function clearFavourites() {
+    removeStorageItem("favourites");
+    favourites();
 }

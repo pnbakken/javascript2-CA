@@ -13,8 +13,8 @@ body {
 }
 
 .nav-logo > a {
-  font-family: "Dancing Script", cursive;
-  font-weight: 700;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
   font-size: 2rem;
   color: #D26637;
   text-decoration: none;
@@ -30,15 +30,18 @@ body {
   color: #2D93AD;
 }
 
-.item-title {
+.data-item .item-title {
   font-family: "Fredoka", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
 }
-
-.item-author {
+.data-item .item-author {
   font-family: "Fredoka", sans-serif;
   font-weight: 300;
+}
+.data-item button {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
 }
 
 * {
@@ -99,14 +102,25 @@ main {
   box-shadow: 2px 5px 5px #0c0c0c;
   display: flex;
   justify-content: center;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .main-data-container {
+    flex-direction: column;
+  }
 }
 
 .data-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   max-width: 100%;
   gap: 1rem;
+}
+@media (max-width: 1440px) {
+  .data-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 @media (max-width: 864px) {
   .data-list {
@@ -123,7 +137,6 @@ main {
   border: 2px solid #3b3b3b;
   padding: 2% 4%;
   border-radius: 0.12rem;
-  box-shadow: 2px 2px 2px #3b3b3b;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
