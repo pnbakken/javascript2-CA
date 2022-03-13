@@ -37,7 +37,8 @@
     border-radius: 0.12rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; //Aligns the item titles. I also would like the buttons aligned at the bottom but I've just realised I've never figured out how to do it. I'll ask on discord next week.
+    justify-content: flex-start;
+    align-items: center; //Aligns the item titles. I also would like the buttons aligned at the bottom but I've just realised I've never figured out how to do it. I'll ask on discord next week.
     gap: 10px;
 
     button {

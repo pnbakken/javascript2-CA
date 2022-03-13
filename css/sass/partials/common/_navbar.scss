@@ -4,6 +4,8 @@ nav {
     background: $color-light-grey;
     box-shadow: $large-shadow;
     align-items: baseline;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-menu {
@@ -21,4 +23,10 @@ nav {
     li {
         display: inline;
     }
+}
+
+.user-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

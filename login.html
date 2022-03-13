@@ -25,28 +25,25 @@
     </header>
     <main>
         <div class="main-data-container">
-            <form id="search-form">
-                <div id="title-search">
-                    <input type="text" name="title" placeholder="Search title" />
-                </div>
-                <div id="author-search">
-                    <input type="text" name="author" placeholder="Search author" />
-                </div>
-                <button id ="clear-search" name="clear-search">Clear search</button>
-            </form>
-            <div class="data-list">
-                
-            </div>
+           
+            
+                <form id="login-form">
+                    <input type="text" id="username-input" name="identifier" placeholder="username" />
+                    <input type="password"  id="password-input" name="password" placeholder="Password" />
+                    <button id="login-button" name="login">Log in</button>
+                    <div class="login-message"></div>
+                </form>
+            
     
             
         </div>
     </main>
     <footer>
-        <p>Footer</p>
+        
         <button id="storage-clear">Clear Storage</button>
         <p><a href="./login.html">Admin login</a></p>
     </footer>
     <script src="./js/script.js" type="module"></script>
-    <script src="./js/modules/components/index/index.js" type="module"></script>
+    <script src="./js/modules/tools/auth/login.js" type="module"></script>
 </body>
 </html>

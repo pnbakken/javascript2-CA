@@ -1,9 +1,10 @@
 export default async function postData(url, outData) {
     const data = JSON.stringify(outData);
+    console.log(data);
     const options = {
         method: "POST",
-        body = data,
-        header= {
+        body : data,
+        headers : {
             "Content-type" : "application/json",
         }
     }

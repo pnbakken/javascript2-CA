@@ -63,6 +63,8 @@ nav {
   background: #f6faf7;
   box-shadow: 2px 5px 5px #0c0c0c;
   align-items: baseline;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-menu {
@@ -78,6 +80,12 @@ nav {
 }
 .nav-links li {
   display: inline;
+}
+
+.user-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer {
@@ -140,6 +148,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   gap: 10px;
 }
 .data-item button {

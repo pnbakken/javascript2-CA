@@ -3,6 +3,7 @@ import buildDataList from "../common/buildDataList.js";
 import displayMessage from "../common/displayMessage.js";
 import {dataURL} from "../../settings/url.js";
 import getData from "../../tools/network/fetchData.js";
+import searchInit from "../../tools/search/search.js";
 
 
 
