@@ -25,8 +25,11 @@ function doSearch(event) {
 function findMatch(searchTerm, searchQuery) {
   
 const matchData = data.filter((item) => {
-    if (item[searchTerm].toLowerCase().includes(searchQuery.toLowerCase())) {
-        return true;
+    //I messed up an entry with postman that broke the search. I've attempted to patch it over, in place of a function to delete that entry. Strapi admin panel won't give me access to article data so until I delete and reinstall the api, I'm stuck with an all-null entry,
+    if (item[searchTerm]) {
+        if (item[searchTerm].toLowerCase().includes(searchQuery.toLowerCase())) {
+            return true;
+        } else return false;
     } else return false;
 })
          

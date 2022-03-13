@@ -4,6 +4,7 @@ import displayMessage from "../common/displayMessage.js";
 import {dataURL} from "../../settings/url.js";
 import getData from "../../tools/network/fetchData.js";
 
+//I could definitely have split this file up into smaller modules, I just wasn't sure where to draw the line and then it just all worked from this one
 
 
 async function favourites() {
@@ -26,7 +27,10 @@ async function favourites() {
 
         
     }
-favourites();
+if (document.querySelector("title").innerText === "Favourites") {
+    favourites();
+}
+
 
 export function getFavourites() {
     const storedFavourites = getFromStorage("favourites");

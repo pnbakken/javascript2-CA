@@ -30,11 +30,11 @@ body {
     font-size: 1.2rem;
     text-decoration: none;
     color: $color-dark-grey;
-    
-    .active {
-        color: $color-light-blue;
-    }
 }
+.nav-link>a.active {
+    color: $color-light-blue;
+}
+
 
 .data-item {
 
